@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+{%load static%}
+<embed src='hi2.mp3' loop="true" autostart="true" width="2" height="0" hidden="true" allow="autoplay">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Abhinav Gangrade</title>
+    	<link rel="stylesheet" href="style.css">
+<link rel="icon" href='abhi.jpg'>
+	<!-- ------------ Font awesome CDN link ------------------ -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+<style>
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
+/* BODY */
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+/*   background-image: -webkit-linear-gradient(90deg, skyblue 0%, steelblue 100%); */
+  background-attachment: fixed;
+  background-size: 1000% 1000%;
+  overflow: auto;
+  font-family: "Luckiest Guy", cursive;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: transparent;
+}
+/* CLOUDS */
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin: auto;
+  border-radius: 100%;
+  background: transparent;
+  display: block;
+  box-shadow: 0 0 150px 100px rgba(255, 255, 255, 0.6),
+    200px 0 200px 150px rgba(255, 255, 255, 0.6),
+    -250px 0 300px 150px rgba(255, 255, 255, 0.6),
+    550px 0 300px 200px rgba(255, 255, 255, 0.6),
+    -550px 0 300px 200px rgba(255, 255, 255, 0.6);
+}
+/* JUMP */
+h1 {
+  cursor: default;
+  position: absolute;
+  top: -60%;
+  left: -20%;
+  right: 90;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+h1 span {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  -webkit-animation: bounce 0.3s ease infinite alternate;
+  font-size: 90px;
+  color: #212f3c;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 span:nth-child(2) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(3) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(4) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(5) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(6) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(8) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(9) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(10) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(11) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(12) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(13) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(14) {
+  -webkit-animation-delay: 0.8s;
+}
+
+/* ANIMATION */
+@-webkit-keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 50px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+<!--------------------------------------------------------------------------->
+*
+
+
+.image-area
+{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	left:90%;
+}
+
+.img-wrapper
+{
+	width: 300px;
+	height: 300px;
+	position: relative;
+	left:59%;
+	overflow: hidden;
+}
+
+.img-wrapper:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 180%;
+	height: 100%;
+	width: 100%;
+	background: rgba(255,255,255,.3);
+	z-index: 1;
+	transform: skew(45deg);
+	transition: .5s;
+}
+
+.img-wrapper:hover:before
+{
+	left: -180%;
+}
+
+.img-wrapper img
+{
+	height: 350px;
+	width: 400px;
+	filter: grayscale(100%);
+	transition: 2s;
+}
+.img-wrapper:hover img
+{
+	filter: grayscale(0%);
+	transform: scale(1.1);
+}
+
+.img-wrapper h2
+{
+	background: tomato;
+	font-family: Poppins;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 8px 0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	transform: perspective(400px) rotateY(90deg);
+	transform-origin: right;
+	transition: 1s;
+}
+
+.img-wrapper:hover h2
+{
+	transform: perspective(400px) rotateY(0deg);
+}
+
+.img-wrapper ul
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: rgba(255,255,255,0);
+}
+
+.img-wrapper ul li
+{
+	background: #333;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 40px;
+	transform: perspective(800px) rotateY(90deg);
+	transition: .5s;
+	transform-origin: left;
+}
+
+.img-wrapper:hover ul li
+{
+	transform: perspective(800px) rotateY(0deg);
+}
+
+.img-wrapper:hover ul li:nth-child(1)
+{
+	transition-delay: .2s;
+}
+
+.img-wrapper:hover ul li:nth-child(2)
+{
+	transition-delay: .6s;
+}
+
+.img-wrapper:hover ul li:nth-child(3)
+{
+	transition-delay: .8s;
+}
+
+.img-wrapper:hover ul li:nth-child(4)
+{
+	transition-delay: 1s;
+}
+.img-wrapper:hover ul li:nth-child(5)
+{
+	transition-delay: 1.2s;
+}
+
+.img-wrapper ul li a
+{
+	color: tomato;
+	background: rgba(255,255,255,0);
+}
+
+.img-wrapper ul li i
+{
+	color: tomato;
+	background: rgba(255,255,255,0);
+}
+
+.img-wrapper ul li i:hover
+{
+	color: #fff;
+	background: rgba(255,255,255,0);
+}
+<!----------------------------------------------------------------------->
+
+<!--body {-->
+<!--  margin: 0;-->
+<!--  padding: 0;-->
+<!--  display: flex;-->
+<!--  justify-content: center;-->
+<!--  align-items: center;-->
+<!--  height: 100vh;-->
+<!--  background-color: #000;-->
+<!--}-->
+
+p {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 1px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #096a5a, #ea5f1a, #fff);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 6s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+<!-------------------------------------------------------------------->
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vw;
+  background: #000;
+}
+
+.threeD {
+  color:  #2ab0cb;
+  white-space: nowrap;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+  font-family: sans-serif;
+  letter-spacing: 0.11em;
+  transition: 0.3s;
+<!--  text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,-->
+<!--    1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,-->
+<!--    5px 13px 15px black;-->
+}
+
+<!--.threeD:hover {-->
+<!--  transition: 0.3s;-->
+<!--  transform: scale(1.1)translate(-50%, -50%);-->
+<!--  text-shadow: 1px -1px 0 grey, 1px -2px 0 grey, 1px -3px 0 grey,-->
+<!--    1px -4px 0 grey, 1px -5px 0 grey, 1px -6px 0 grey, 1px -7px 0 grey,-->
+<!--    1px -8px 0 grey, 5px -13px 15px black, 5px -13px 25px #808080;-->
+<!--}-->
+
+<!--p {-->
+<!--  position: relative;-->
+<!--  font-family: sans-serif;-->
+<!--  text-transform: uppercase;-->
+<!--  font-size: 2em;-->
+<!--  letter-spacing: 1px;-->
+<!--  overflow: hidden;-->
+<!--  background: linear-gradient(90deg, #096a5a, #ea5f1a, #fff);-->
+<!--  background-repeat: no-repeat;-->
+<!--  background-size: 80%;-->
+<!--  animation: animate 6s linear infinite;-->
+<!--  -webkit-background-clip: text;-->
+<!--  -webkit-text-fill-color: rgba(255, 255, 255, 0);-->
+<!--}-->
+
+<!--@keyframes animate {-->
+<!--  0% {-->
+<!--    background-position: -500%;-->
+<!--  }-->
+<!--  100% {-->
+<!--    background-position: 500%;-->
+<!--  }-->
+<!--}-->
+<!------------------------------------------------------------------------------------->
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    --c: grey;
+    color: grey;
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    bottom:-360px;
+    left:40%;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+}
+
+nav ul li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+nav ul li:hover {
+    color:  #2ab0cb;
+}
+
+nav ul li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+nav ul li span:nth-child(1) {
+    --n: 1;
+}
+
+nav ul li span:nth-child(2) {
+    --n: 2;
+}
+
+nav ul li span:nth-child(3) {
+    --n: 3;
+}
+
+nav ul li span:nth-child(4) {
+    --n: 4;
+}
+</style>
+<body>
+<!--<span class="text">Abhinav Gangrade</span>-->
+<!--<p>Abhinav Gangrade</p>-->
+<h1>
+  <span>A</span>
+  <span>b</span>
+  <span>h</span>
+  <span>i</span>
+  <span>n</span>
+  <span>a</span>
+  <span>v</span>
+</br>
+  <span>G</span>
+  <span>a</span>
+  <span>n</span>
+  <span>g</span>
+  <span>r</span>
+  <span>a</span>
+  <span>d</span>
+  <span>e</span>
+</h1>
+<!----------------------------------------------------------------------------->
+	<div class="image-area">
+		<div class="img-wrapper">
+			<img src='abhi.jpg' alt="Abhinav Gangrade">
+			<h2>Abhinav Gangrade</h2>
+			<ul>
+				<li><a href="https://github.com/abhinav0606" target="_blank"><i class="fab fa-github"></i></a></li>
+				<li><a href="https://www.instagram.com/gangrade_abhinav/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://twitter.com/AbhinavGangrad3" target="_blank"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="https://www.facebook.com/abhinav.gangrade.90" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.facebook.com/abhinav.gangrade.90" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+			</ul>
+		</div>
+	</div>
+<!--<p>EDUCATION:<br>-->
+<!--College: IIIT Bhubaneswar-->
+<!--<br>    12th: St.Pius Sr Secondary School (94%)-->
+<!--    <br>10th: St.Pius Sr Secondary School(10 CGPA)-->
+<!--    <br>-->
+<!--    <br>-->
+
+<!--    Experience:<br>-->
+<!--    Python Developer Intern At Intellify Delhi(April(2020)-present)-->
+<!--    <br>-->
+<!--    Web Developement Intern At Impact App(January(2020)-March(2020))-->
+<!--    <br>-->
+<!--    Created a web app for them <a href="http://abhinnav0606.pythonanywhere.com/" target="_blank"> Check this out</a>-->
+<!--     <br>-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    Projects:-->
+<!--    <br>-->
+<!--    1)Text To Speech:-->
+<!--    <br>-->
+<!--    Created a Text to Speech Model In python using pyttsx3 which will take the input from the user and return in the form of speech-->
+<!--<br>-->
+<!--    <br>-->
+<!--    2)Facial Recognition And Unlock system-->
+<!--    <br>-->
+<!--    Created a facial recognition in opencv python.We can also Use that script as a face unlock for our system.-->
+<!--</p>-->
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="threeD">
+    <br>
+    <br>
+            EDUCATION:<br>
+College: IIIT Bhubaneswar
+<br>    12th: St.Pius Sr Secondary School (94%)
+    <br>10th: St.Pius Sr Secondary School(10 CGPA)
+    <br>
+    <br>
+<!---->
+    Experience:<br>
+    Python Developement Intern At Intellify Delhi(April(2020)-present)
+    <br>
+    Web Developement Intern At Impact App(January(2020)-March(2020))
+    Created a web app for them <a href="http://abhinnav0606.pythonanywhere.com/" target="_blank"> Check this out</a>
+     <br>
+    <br>
+    <br>
+    Projects:
+    <br>
+    1)Text To Speech:
+    <br>
+    Created a Text to Speech Model In python using pyttsx3 which will take the input from the user and return in the form of speech
+    <li><a href="https://github.com/abhinav0606/text_to_speech" target="_blank"><i class="fab fa-github"></i></a></li>
+    <br>
+    2)Facial Recognition And Unlock system
+    <br>
+   Created a facial recognition in opencv python.We can also Use that script as a face unlock for our system.
+    <li><a href="https://github.com/abhinav0606/facial_recognition" target="_blank"><i class="fab fa-github"></i></a></li>
+<br>
+    3) Amazon_Scrap:
+    <br>
+    Created a scrapping script in python using scrapy and used the user agent proxy for rotating the browser.
+    <br>
+    <li><a href="https://github.com/abhinav0606/amazon_scrap_Compare_the_price" target="_blank"><i class="fab fa-github"></i></a></li>
+<br>
+    4) Desktop Notifier In Python
+    <br>
+    Created A Desktop notifier In python using feedparser and notify2 which is going to pass the rss feed.
+    <br>
+    <li><a href="https://github.com/abhinav0606/DesktopNotifier" target="_blank"><i class="fab fa-github"></i></a></li>
+<br>
+    5) Chat Room in python
+    <br>
+    Created a Chat Room in python through socket.in which we will have a admin script and the other one is members<br> script
+    <li><a href="https://github.com/abhinav0606/chat_room" target="_blank"><i class="fab fa-github"></i></a></li>
+</div>
+
+<nav>
+  <ul>
+
+    <li>
+        <a href='a.pdf' download target="_blank" >Resume</a>
+      <span></span><span></span><span></span><span></span>
+    </li>
+  </ul>
+</nav>
+</body>
+
+</html>
